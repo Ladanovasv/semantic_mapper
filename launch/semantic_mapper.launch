@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<launch>
+  <node name="semantic_mapper" pkg="semantic_mapper" type="semantic_mapper.py" output="screen">
+    <param name="image_topic_1" value="/zed_node/left/image_rect_color/compressed"/>
+    <param name="image_topic_2" value=""/>
+    <param name="semantic_mask_topic_1" value="/segmentated"/>
+    <param name="semantic_mask_topic_2" value=""/>
+    <param name="target_classes" value="person,sofa"/>
+    <param name="vision_range" value="5.0"/>
+    <param name="goal_decay" value="0.9"/>
+    <param name="goal_threshold" value="1.99"/>
+    <param name="erosion" value="2"/>
+  </node>
+</launch>
